@@ -8,8 +8,10 @@ module.exports = function(app){
       password : '123456',
       database : 'casadocodigo'
     });
+    // para enviar o json
+    //res.send(results);
       connection.query('select * from livros', function(err, results){
-      res.send(results);
+      res.render('produtos/lista', {lista:results});
     });
     connection.end();
   });
