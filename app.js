@@ -1,8 +1,4 @@
-//To DO separar os requires
-var express = require('express');
-var app = express();
-
-app.set('view engine', 'ejs');
+var app = require('./config/express')();
 
 app.get('/produtos', function(req, res){
     res.render("produtos/lista");
