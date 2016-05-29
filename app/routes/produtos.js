@@ -8,8 +8,7 @@ module.exports = function(app){
       password : '123456',
       database : 'casadocodigo'
     });
-
-    connection.query('select * from livros', function(err, results){
+      connection.query('select * from livros', function(err, results){
       res.send(results);
     });
     connection.end();
