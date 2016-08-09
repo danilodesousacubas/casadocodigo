@@ -8,7 +8,7 @@ module.exports = function(app){
          res.render('produtos/lista', {lista:results});
     });
     connection.end();
-    console.log('Logging');
+    // console.log('Logging');
   });
 
 }
