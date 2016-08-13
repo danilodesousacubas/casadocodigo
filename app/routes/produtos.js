@@ -1,6 +1,5 @@
 module.exports = function(app){
 
-<<<<<<< HEAD
   var listaProdutos = function(req, res){
     var connection = app.infra.connectionFactory();
     var produtosDAO = new  app.infra.produtosDAO(connection);
@@ -22,10 +21,6 @@ module.exports = function(app){
   app.get('/produtos/form', function(req, res){
     res.render('produtos/form', {errosValidacao:{}});
   });
-=======
-  app.get('/produtos', listaProdutos);
-  app.get('/produtos/form', function(req, res) {res.render('produtos/form'); });
->>>>>>> b287e8b7d30a329003e252ebf486ca24d2c3bbbb
 
   app.post('/produtos', function(req,res){
     var produto = req.body;
