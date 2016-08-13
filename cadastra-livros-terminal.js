@@ -11,14 +11,15 @@ var configuracoes = {
   }
 };
 
-var client = http.request(configuracoes, function(req,res){
-    req.on('data', function(body){
+var client = http.request(configuracoes, function(res){
+  console.log(res.statusCode);
+  res.on('data', function(body){
     console.log("--",res.statusCode);
-   });
+  });
 });
 
 var produto = {
-  titulo: 'mais sobre node',
+  titulo: 'BB',
   preco: 100,
   descricao: 'node, java script'
 };
