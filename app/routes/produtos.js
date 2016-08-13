@@ -1,14 +1,9 @@
 module.exports = function(app){
-
-
   var listaProdutos = function(req, res){
     var connection = app.infra.connectionFactory();
     var produtosDAO = new  app.infra.produtosDAO(connection);
 
-
-
     produtosDAO.lista(function(err, results){
-      // console.log("Content-type"+res.format)
       res.format({
         html: function(){
           res.render('produtos/lista', {lista:results});
@@ -33,9 +28,6 @@ module.exports = function(app){
     req.assert('preco', 'Formato inválido').isFloat();
 
     var erros = req.validationErrors();
-
-    // console.log(erros);
-
     if(erros){
       res.format({
         html: function(){
