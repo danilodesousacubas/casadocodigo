@@ -19,7 +19,7 @@ var client = http.request(configuracoes, function(res){
 });
 
 var produto = {
-  titulo: 'BB',
+  titulo: 'CC',
   preco: 100,
   descricao: 'node, java script'
 };
