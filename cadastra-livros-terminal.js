@@ -13,7 +13,7 @@ var configuracoes = {
 
 var client = http.request(configuracoes, function(req,res){
     req.on('data', function(body){
-    console.log("--"+res.statusCode);
+    console.log("--",res.statusCode);
    });
 });
 
