@@ -12,8 +12,8 @@ var configuracoes = {
 };
 
 var client = http.request(configuracoes, function(req,res){
-   req.on('data', function(body){
-    console.log('Corpo' + body);
+    req.on('data', function(body){
+    console.log("--"+res.statusCode);
    });
 });
 
@@ -22,6 +22,7 @@ var produto = {
   preco: 100,
   descricao: 'node, java script'
 };
+
 var p = JSON.stringify(produto);
 
 client.end(p);
