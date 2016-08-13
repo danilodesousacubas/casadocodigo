@@ -1,8 +1,10 @@
 ##### packages
-##### express
+##### express and express-load
 ##### ejs
+#####test
+##### npm install mocha --save-dev
+##### banco:
 ##### sudo npm intall mysql --save
+##### infra
 ##### sudo npm install -g nodemon
-##### sudo npm install express-load --save
-##### create database casadocodigo;
 ##### mysql -u root -p
