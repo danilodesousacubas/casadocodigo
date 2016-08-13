@@ -1,10 +1,10 @@
-##### packages
-##### express and express-load
+### npm install [packages]
+##### express, express-load, express-validator
+##### body-parser
 ##### ejs
-#####test
+### test
 ##### npm install mocha --save-dev
-##### banco:
+### infra
 ##### sudo npm intall mysql --save
-##### infra
 ##### sudo npm install -g nodemon
 ##### mysql -u root -p
