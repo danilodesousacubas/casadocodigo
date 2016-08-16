@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <form action="/promocoes" method="post">
+      <div>
+        <select name="livro[id]">
+          <%=for(int=0;i<lista.length;i++){%>
+            <option value="<%=lista[i].id%>"><%=lista[i].titulo%></option>
+          <%}%>
+        </select>
+      </div>
+      <input type="submit" name="name" value="Cadastro">
+    </form>
+  </body>
+</html>

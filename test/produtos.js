@@ -1,7 +1,7 @@
 var http = require('http');
 var assert = require('assert');
 describe('ProdutosController', function() {
-  it('#listagem json', function(done) {
+  it('#listagem 2 ', function(done) {
     var configuracoes = {
         hostname: 'localhost',
         port: 3000,
@@ -11,8 +11,9 @@ describe('ProdutosController', function() {
         }
     };
     http.get(configuracoes, function(res) {
-      assert.equal(res.statusCode, 200);
-      assert.equal(res.headers['content-type'],'application/json; charset=utf-8');
+      console.log(res.statusCode)
+       assert.equal(res.statusCode, 200);
+       assert.equal(res.headers['content-type'],'application/json; charset=utf-8');
       done();
     });
   });

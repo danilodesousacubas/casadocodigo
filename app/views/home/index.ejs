@@ -1,0 +1,252 @@
+<html ng-app="cdcApp">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="icon"
+          href="//cdn.shopify.com/s/files/1/0155/7645/t/177/assets/favicon.ico?11981592617154272979"
+          type="image/ico"/>
+    <link href="https://plus.googlecom/108540024862647200608"
+          rel="publisher"/>
+    <title>Livros de Java, SOA, Android, iPhone, Ruby on Rails e
+        muito mais - Casa do Código</title>
+    <link href="/css/site/cssbase-min.css"
+          rel="stylesheet" type="text/css" media="all"/>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
+          rel='stylesheet'/>
+    <link
+            href="/css/site/fonts.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/fontello-ie7.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/fontello-embedded.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/fontello.css"
+            rel="stylesheet" type="text/css" media="all"/>
+
+    <link
+            href="/css/site/style.css"
+            rel="stylesheet" type="text/css" media="all"/>
+
+    <link
+            href="/css/site/layout-colors.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/responsive-style.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link rel="canonical" href="http://www.casadocodigo.com.br/"/>
+
+    <link href="/css/site/book-collection.css"
+          rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body class="home">
+
+<header id="layout-header">
+    <div class="clearfix container">
+        <a href="/" id="logo">
+            <!-- <img src="http://cdn.shopify.com/s/files/1/0155/7645/t/177/assets/casa-do-codigo-blue.svg?11981592617154272979" alt="Casa do Codigo"> -->
+        </a>
+
+        <div id="header-content">
+            <nav id="main-nav">
+
+                <ul class="clearfix">
+                    <li><a href="/cart" rel="nofollow">Seu carrinho</a></li>
+
+                    <li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre</a></li>
+
+                    <li><a href="/pages/perguntas-frequentes" rel="nofollow">Perguntas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<nav class="categories-nav">
+    <ul class="container">
+        <li class="category"><a href="http://www.casadocodigo.com.br">Home</a></li>
+        <li class="category"><a href="/collections/livros-de-agile">
+                Agile </a></li>
+        <li class="category"><a href="/collections/livros-de-front-end">
+                Front End </a></li>
+        <li class="category"><a href="/collections/livros-de-games">
+                Games </a></li>
+        <li class="category"><a href="/collections/livros-de-java">
+                Java </a></li>
+        <li class="category"><a href="/collections/livros-de-mobile">
+                Mobile </a></li>
+        <li class="category"><a
+                    href="/collections/livros-desenvolvimento-web"> Web </a></li>
+        <li class="category"><a href="/collections/outros"> Outros </a></li>
+    </ul>
+</nav>
+
+<!-- inicio da listagem em si-->
+<section id="index-section" class="container middle" ng-controller="HomeController">
+
+    <ul id="home-highlight-collection">
+        <%for(i=0; i<3; i++) {%>
+        <li class="col-left">
+            <a href="linkDetalhe" class="block clearfix">
+                <img width="170" height="240" src="data:image/png;base64,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" alt="<%=livros[i].titulo%>" title="<%=livros[i].titulo%>"/>
+
+                <h2 class="product-title"><%=livros[i].titulo%></h2>
+                <small class="buy-button">Lan&#231;amento!</small>
+            </a>
+        </li>
+        <%}%>
+    </ul>
+
+
+    <h1 class="cdc-call">Últimos dias com os preços promocionais.
+        Aproveite!</h1>
+
+    <ul class="clearfix book-collection">
+        <%for(i=0; i<livros.length; i++) {%>
+            <li>
+                <a href="linkDetalhe" class="block clearfix">
+                    <h2 class="product-title"><%=livros[i].titulo%></h2>
+                    <img width="143"
+                         height="202"
+                         src="linkImagemCapa"
+                         alt="<%=livros[i].titulo%>"
+                         title="<%=livros[i].titulo%>"/>
+
+                    <small class="buy-button">Compre</small>
+                </a>
+            </li>
+        <%}%>
+
+    </ul>
+
+    <h2 class="cdc-call">Diferenciais da Casa do Código</h2>
+
+    <ul id="cdc-diferenciais" class="clearfix">
+        <li class="col-left">
+            <h3>E-books sem DRM. Leia onde quiser</h3>
+
+            <p>
+                <span class="sprite" id="sprite-drm"></span> Nossos e-books não
+                possuem DRM, ou seja, você pode ler em qualquer computador, tablet
+                e smartphone.
+            </p>
+        </li>
+        <li class="col-right">
+            <h3>Autores de renome na comunidade</h3>
+
+            <p>
+                <span class="sprite" id="sprite-renome"></span> Autores que
+                participam ativamente na comunidade com Open Source, listas de
+                discussão, grupos e mais.
+            </p>
+        </li>
+        <li class="col-left">
+            <h3>Receba atualizações dos e-books</h3>
+
+            <p>
+                <span class="sprite" id="sprite-atualizacoes"></span> Quando você
+                compra um e-book, automaticamente tem direito às atualizações e
+                correções dele.
+            </p>
+        </li>
+        <li class="col-right">
+            <h3>Livros com curadoria da Caelum</h3>
+
+            <p>
+                <span class="sprite" id="sprite-caelum"></span> Desenvolvedores
+                experientes que avaliam e revisam os livros constantemente.
+            </p>
+        </li>
+    </ul>
+
+
+</section>
+
+<!-- fim-->
+
+<footer id="layout-footer">
+    <div class="clearfix container">
+
+
+        <div id="collections-footer">
+            <!-- cdc-footer -->
+            <p class="footer-title">Coleções de Programação</p>
+            <ul class="footer-text-links">
+                <li><a href="/collections/livros-de-java">Java</a></li>
+                <li><a href="/collections/livros-desenvolvimento-web">Desenvolvimento
+                        Web</a></li>
+                <li><a href="/collections/livros-de-mobile">Mobile</a></li>
+                <li><a href="/collections/games">Games</a></li>
+                <li><a href="/collections/livros-de-front-end">Front End</a></li>
+            </ul>
+            <p class="footer-title">Outros Assuntos</p>
+            <ul class="footer-text-links">
+                <li><a href="/collections/livros-de-agile">Agile</a></li>
+                <li><a href="/collections/outros">e outros...</a></li>
+            </ul>
+        </div>
+        <div id="social-footer">
+            <!-- books-footer -->
+            <p class="footer-title">Links da Casa do Código</p>
+            <ul class="footer-text-links">
+                <li><a href="http://livros.casadocodigo.com.br" rel="nofollow">Meus
+                        E-books</a></li>
+                <li><a href="/pages/sobre-a-casa-do-codigo">Sobre a Casa
+                        do Código</a></li>
+                <li><a href="/pages/perguntas-frequentes">Perguntas
+                        Frequentes</a></li>
+                <li><a href="https://www.caelum.com.br">Caelum - Ensino e
+                        Inovação</a></li>
+                <li><a href="http://www.codecrushing.com/" rel="nofollow">Code
+                        Crushing</a></li>
+                <li><a
+                            href="http://www.casadocodigo.com.br/pages/politica-de-privacidade"
+                            rel="nofollow">Política de Privacidade</a></li>
+            </ul>
+            <p class="footer-title">Redes Sociais</p>
+            <ul>
+                <li class="social-links"><a
+                            href="http://www.twitter.com/casadocodigo" target="_blank"
+                            id="twitter" rel="nofollow">Facebook</a> <a
+                            href="http://www.facebook.com/casadocodigo" target="_blank"
+                            id="facebook" rel="nofollow">Twitter</a></li>
+            </ul>
+        </div>
+        <div id="newsletter-footer">
+            <!-- social-footer -->
+            <p class="footer-title">Receba as Novidades e Lançamentos</p>
+
+            <div id="form-newsletter">
+                <form
+                        action=""
+                        method="POST" id="ss-form" class="form-newsletter">
+                    <ul>
+                        <li><input type="hidden" name="pageNumber" value="0"/><input
+                                    type="hidden" name="backupCache" value=""/><input
+                                    type="email" name="entry.0.single" value="" class="ss-q-short"
+                                    id="entry_0" placeholder="seu@email.com"/></li>
+                        <li><input type="submit" name="submit"
+                                   value="Quero Receber!" id="submit-newsletter"/></li>
+                    </ul>
+                </form>
+                <ul>
+                    <li class="ie8"><a
+                                href=""
+                                rel="nofollow">Receba as Novidades e Lançamentos</a></li>
+                </ul>
+            </div>
+            <ul class="footer-payments">
+                <li><img class="accepts-paypal"
+                         src="//cdn.shopify.com/s/files/1/0155/7645/t/177/assets/accepts_paypal.png?11981592617154272979"
+                         border="0" alt="Paypal" width="130" height="80"/></li>
+                <li><img class="accepts-pagseguro"
+                         src="//cdn.shopify.com/s/files/1/0155/7645/t/177/assets/logopagseguro.png?11981592617154272979"
+                         border="0" alt="PagSeguro" width="180" height="26"/></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
