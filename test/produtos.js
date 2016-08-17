@@ -1,7 +1,7 @@
 var http = require('http');
 var assert = require('assert');
 describe('ProdutosController', function() {
-  it('#listagem 2 ', function(done) {
+  it('#listagem: precisa do server up! ', function(done) {
     var configuracoes = {
         hostname: 'localhost',
         port: 3000,
